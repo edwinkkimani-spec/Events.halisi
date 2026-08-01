@@ -1,5 +1,8 @@
 body {
   background-color:#d6d5c9;
+  width:700px;
+  height:200vh;
+  
   
 }
 
@@ -9,12 +12,12 @@ body {
   height: 200vh;
   width: 200px;
   margin-top: 50px;
-  background-color: brown;
+  background-color:#99582a;
   justify-content: left;
 }
 
 .sidebar a {
-  padding: 10%;
+  padding: 30%;
   display: block;
   margin: 40px 15%;
   text-align: center;
@@ -40,6 +43,9 @@ body {
 .site-header h1 {
   text-align: center;
   display: block;
+   color:#99582a;
+   
+   
 }
 
 .header-img-left {
