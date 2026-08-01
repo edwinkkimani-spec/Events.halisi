@@ -1,0 +1,57 @@
+body{
+    background-color:grey;
+
+    
+}
+
+
+
+
+.sidebar{
+
+    top:20%;
+    left:90%;
+    height: 50vh;
+    width:200px;
+    margin-top:50px;
+    background-color: brown;
+    justify-content:left;
+}
+
+.sidebar a{
+    padding:10%;
+    display:block;
+    margin:40px 15%;
+    text-align:center;
+}
+
+.sidebar a:hover{
+     color: red;
+ }
+
+.header-img{
+    height: 40px;
+    width:40px;
+    object-fit: contain;
+    text-align: center;
+    background-color: green ;
+
+}
+
+.site-header{
+   display: grid;
+    align-items: center;
+    grid-template-columns: 60px  1fr 60px;
+}
+.site-header h1{
+    text-align: center;
+    display: block;
+}
+
+.header-img-left {
+    justify-self:start;
+}
+
+.header-img-right{
+    justify-content: end;
+}
