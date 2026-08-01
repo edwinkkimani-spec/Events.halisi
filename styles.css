@@ -1,57 +1,72 @@
-body{
-    background-color:grey;
-
-    
+body {
+  background-color: grey;
+  
 }
 
-
-
-
-.sidebar{
-
-    top:20%;
-    left:90%;
-    height: 50vh;
-    width:200px;
-    margin-top:50px;
-    background-color: brown;
-    justify-content:left;
+.sidebar {
+  top: 20%;
+  left: 90%;
+  height: 200vh;
+  width: 200px;
+  margin-top: 50px;
+  background-color: brown;
+  justify-content: left;
 }
 
-.sidebar a{
-    padding:10%;
-    display:block;
-    margin:40px 15%;
-    text-align:center;
+.sidebar a {
+  padding: 10%;
+  display: block;
+  margin: 40px 15%;
+  text-align: center;
 }
 
-.sidebar a:hover{
-     color: red;
- }
-
-.header-img{
-    height: 40px;
-    width:40px;
-    object-fit: contain;
-    text-align: center;
-    background-color: green ;
-
+.sidebar a:hover {
+  color: red;
 }
 
-.site-header{
-   display: grid;
-    align-items: center;
-    grid-template-columns: 60px  1fr 60px;
+.header-img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  text-align: center;
+  background-color: green;
 }
-.site-header h1{
-    text-align: center;
-    display: block;
+
+.site-header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 60px 1fr 60px;
+}
+.site-header h1 {
+  text-align: center;
+  display: block;
 }
 
 .header-img-left {
-    justify-self:start;
+  justify-self: start;
 }
 
-.header-img-right{
-    justify-content: end;
+.header-img-right {
+  justify-content: end;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background:green;
+  color: brown;
+}
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-socials a:hover{
+      color:bisque;
+}
+
+.footer-socials a{
+    color:#fff;
+    font-size:1.5rem;
 }
