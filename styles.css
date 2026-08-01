@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color:#d6d5c9;
   
 }
 
@@ -53,7 +53,7 @@ body {
 .footer {
   text-align: center;
   padding: 2rem 1rem;
-  background:green;
+  background:#092014;
   color: brown;
 }
 .footer-socials {
@@ -67,6 +67,6 @@ body {
 }
 
 .footer-socials a{
-    color:#fff;
+    color:brown;
     font-size:1.5rem;
 }
