@@ -6,21 +6,20 @@ body {
 }
 
 .sidebar {
-  top: 20%;
+  top: 0%;
   left: 90%;
   height:70vh;
-  width:200px;
-  margin-bottom: 50px;
+  width:95px;
   background-color:#99582a;
+
+
   
 }
 
 .sidebar a {
-
-  padding: 20%;
+   padding:20px 16px;
   display: block;
-  margin: 40px 15%;
-  text-align: center;
+  margin: 50px 15%;
 }
 
 .sidebar a:hover {
@@ -40,6 +39,8 @@ body {
   align-items: center;
   grid-template-columns: 60px 1fr 60px;
   background-color:#5e503f;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .site-header h1 {
   text-align: center;
@@ -54,7 +55,7 @@ body {
 }
 
 .header-img-right {
-  justify-content: end;
+  justify-self:end;
 }
 
 .footer {
@@ -62,6 +63,7 @@ body {
   padding: 2rem 1rem;
   background:#092014;
   color: brown;
+  margin: 10px;
 }
 .footer-socials {
   display: flex;
@@ -77,3 +79,22 @@ body {
     color:brown;
     font-size:1.5rem;
 }
+
+.hero{
+  text-align: center;
+  padding:4rem 1.5rem;
+}
+
+.hero h2{
+  font-size:2rem;
+  margin-bottom:0.5rem;
+}
+.hero p{
+  color:#092014;
+  font-size: 1.1rem;
+}
+.layout{
+  display:flex;
+  gap:300px;
+}
+
