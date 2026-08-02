@@ -3,10 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link ref="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Events</title>
   </head>
   <body>
-         
+    <header class="site-header">
+      <img
+        src="Images/logo.jpg"
+        alt="logo"
+        class="header-img header-img-left"
+      />
+      <h1 class="site-header h1">T-Smart</h1>
+      <img
+        src="Images/logo.jpg"
+        alt="logo"
+        class="header-img header-img-right"
+      />
+    </header>
+   <div class="layout">
+    <nav class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="Halisi-events.html" class="cta-button">Browse Events</a>
+      <a href="qrcode.html">Scan</a>
+    </nav>
+    <main>
+      <div class="hero">
+      <h1>All Events</h1>
+      <p>Browse whats happening and grab your smart ticket.</p>
+      </div>
+      <section class="events-section">
+        <div id="event-list" class="event-list"></div>
+      </section>
+    </main>
+   </div>
+
+
+    <footer class="footer">
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/..." target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram</a>
+      
+        <a href="https://www.tiktok.com/..." target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TikTok</a>
+        </div>
+      <p class="footer-brand">T-Smart</p>
+      <p class="">&copy; 2026 T-Smart.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
