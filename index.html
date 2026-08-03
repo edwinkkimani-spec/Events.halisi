@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Smart | Smart Ticketing Solution</title>
+    
+    <!-- Unified CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- FontAwesome for Modern UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
 
+    <!-- Top Site Header with Dual Logos -->
+    <header class="site-header">
+        <img src="Images/logo.jpg" alt="T-Smart Logo Left" class="header-img header-img-left" />
+        <h1 class="header-title">T-Smart</h1>
+        <img src="Images/logo.jpg" alt="T-Smart Logo Right" class="header-img header-img-right" />
+    </header>
+
+    <!-- Main Application Grid (Sidebar Navigation + Dynamic Content) -->
+    <div class="layout">
+        
+        <!-- Sidebar Navigation Drawer -->
+        <nav class="sidebar">
+            <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="Halisi-events.html"><i class="fa-solid fa-calendar-days"></i> Browse Events</a>
+            <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i> Scan Pass</a>
+        </nav>
+        
+        <!-- Main Content Area -->
+        <main class="content-body">
+            
+            <!-- Visual Hero Banner -->
+            <section class="hero-section">
+                <div class="hero-badge"><i class="fa-solid fa-bolt"></i> Next-Gen Smart Passes</div>
+                <h1 class="hero-title">Welcome to T-Smart</h1>
+                <p class="hero-subtitle">Cop your smart tickets here in seconds—no more waiting in line.</p>
+                <div class="hero-cta-group">
+                    <a href="Halisi-events.html" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explore Events</a>
+                    <a href="#about" class="btn btn-secondary"><i class="fa-solid fa-circle-info"></i> Learn More</a>
+                </div>
+            </section>
+
+            <!-- Quick Metrics / Features Bar -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <i class="fa-solid fa-shield-halved metric-icon"></i>
+                    <div>
+                        <h3>100% Secure</h3>
+                        <p>Encrypted pass data</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-qrcode metric-icon"></i>
+                    <div>
+                        <h3>Single-Use QR</h3>
+                        <p>Anti-fraud gate validation</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-gauge-high metric-icon"></i>
+                    <div>
+                        <h3>Instant Access</h3>
+                        <p>Zero wait time</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About T-Smart Section -->
+            <section id="about" class="about-section">
+                <div class="section-header">
+                    <h2>About T-Smart</h2>
+                    <p>Redefining how you discover, register, and attend live events.</p>
+                </div>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <i class="fa-solid fa-ticket feature-icon"></i>
+                        <h3>Instant Digital Pass</h3>
+                        <p>No printing necessary. Every registered ticket generates a unique pass stored directly in your browser session.</p>
+                    </article>
+                    <article class="about-card">
+                        <i class="fa-solid fa-lock feature-icon"></i>
+                        <h3>Anti-Fraud Entry</h3>
+                        <p>Once your QR code is scanned at the entrance gate, the system marks it as used to prevent unauthorized re-entry or duplicates.</p>
+                    </article>
+                    <article class="about-card">
+                        <i class="fa-solid fa-mobile-screen feature-icon"></i>
+                        <h3>Seamless Experience</h3>
+                        <p>Fast, lightweight, and responsive across all devices—desktop, tablet, and mobile smartphones.</p>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
+        </div>
+        <p class="footer-brand">T-Smart</p>
+        <p>&copy; 2026 T-Smart. All rights reserved.</p>
+    </footer>
+
+    <!-- Core App Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
