@@ -98,3 +98,42 @@ body {
   gap:300px;
 }
 
+.ticket-card{
+  max-width:320px;
+  margin:2rem auto;
+  padding:1.5rem;
+  border-radius:1px solid #472d30;
+  border-radius:10px;
+  background:#fff;
+}
+.ticket-card p{
+  margin:0.4 rem 0;
+  dispaly:flex;
+
+}
+
+#qrcode-box{
+  dispaly:flex;
+  justify-content:center;
+  margin-top:1.5rem;
+}
+
+.table{
+  display:flex;
+  gap:300px;
+  text-align: center;
+}
+
+.search-bar{
+  max-width:400px;
+  margin:0 auto 1.5rem;
+  padding:0 1.5rem;
+}
+
+.search-bar input{
+  width:100%;
+  padding:0.7rem 1rem;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  font-size:1rem;
+}
