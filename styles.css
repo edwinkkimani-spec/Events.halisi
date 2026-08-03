@@ -108,12 +108,12 @@ body {
 }
 .ticket-card p{
   margin:0.4 rem 0;
-  dispaly:flex;
+
 
 }
 
 #qrcode-box{
-  dispaly:flex;
+  
   justify-content:center;
   margin-top:1.5rem;
 }
@@ -136,4 +136,15 @@ body {
   border:1px solid #d1d5db;
   border-radius:8px;
   font-size:1rem;
+}
+
+.search-bar input:focus {
+    outline:none;
+    border-color: #472d30;
+}
+
+.no-result {
+  text-align:center;
+  color:#c1121f;
+  padding:2rem;
 }
