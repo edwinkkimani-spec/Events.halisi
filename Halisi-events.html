@@ -5,42 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>T-Smart | Browse Events</title>
     
-    // Unified CSS Stylesheet //
     <link rel="stylesheet" href="styles.css" />
     
-    //  for Modern UI Icons //
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-    // Top Site Header with Dual Logos //
     <header class="site-header">
         <img src="Images/logo.jpg" alt="T-Smart Logo Left" class="header-img header-img-left" />
         <h1 class="header-title">T-Smart</h1>
         <img src="Images/logo.jpg" alt="T-Smart Logo Right" class="header-img header-img-right" />
     </header>
 
-    // Main Application Grid //
+  
     <div class="layout">
         
-        // Sidebar Navigation Drawer //
+      
         <nav class="sidebar">
             <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
             <a href="Halisi-events.html" class="active"><i class="fa-solid fa-calendar-days"></i> Browse Events</a>
             <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i> Scan Pass</a>
         </nav>
         
-        // Main Content Area //
+      
         <main class="content-body">
             
-            //Hero Banner//
+        
             <section class="hero-section">
                 <div class="hero-badge"><i class="fa-solid fa-ticket"></i> Live Listings</div>
                 <h1 class="hero-title">All Events</h1>
                 <p class="hero-subtitle">Browse what's happening around you and cop your smart ticket instantly.</p>
             </section>
 
-            // Events & Search Section //
+            
             <section class="events-section">
                 <!-- Search & Filter Controls -->
                 <div class="search-container">
@@ -53,14 +51,13 @@
                     />
                 </div>
 
-                //Dynamic Event List Container (Populated by script.js) //
                 <div id="event-list" class="event-grid"></div>
             </section>
 
         </main>
     </div>
 
-    //Site Footer//
+
     <footer class="footer">
         <div class="footer-socials">
             <a href="https://www.instagram.com/" target="_blank">
@@ -74,7 +71,7 @@
         <p>&copy; 2026 T-Smart. All rights reserved.</p>
     </footer>
 
-    //  App Logic //
+
     <script src="script.js"></script>
 </body>
 </html>
