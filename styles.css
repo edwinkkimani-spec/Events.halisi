@@ -24,7 +24,7 @@
     font-weight: 800;
     letter-spacing: 1px;
     background: linear-gradient(135deg, #38bdf8, #6366f1);
-    -webkit-background-clip: text;
+    -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -235,7 +235,7 @@
 .search-input {
     width: 100%;
     padding: 14px 20px 14px 48px;
-    background: #1e293b;
+    background-color: #1e293b;
     border: 1px solid #334155;
     border-radius: 12px;
     color: #f8fafc;

@@ -1,80 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>T-Smart | Browse Events</title>
-
+    
+    // Unified CSS Stylesheet //
     <link rel="stylesheet" href="styles.css" />
+    
+    //  for Modern UI Icons //
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
+    // Top Site Header with Dual Logos //
     <header class="site-header">
-      <img
-        src="Images/logo.jpg"
-        alt="logo"
-        class="header-img header-img-left"
-      />
-      <h1 class="site-header h1">T-Smart</h1>
-      <img
-        src="Images/logo.jpg"
-        alt="logo"
-        class="header-img header-img-right"
-      />
+        <img src="Images/logo.jpg" alt="T-Smart Logo Left" class="header-img header-img-left" />
+        <h1 class="header-title">T-Smart</h1>
+        <img src="Images/logo.jpg" alt="T-Smart Logo Right" class="header-img header-img-right" />
     </header>
+
+    // Main Application Grid //
     <div class="layout">
-      <nav class="sidebar">
-        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
-        <a href="Halisi-events.html" class="active"
-          ><i class="fa-solid fa-calendar-days"></i>Browse Events</a
-        >
-        <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i>Scan pass</a>
-      </nav>
+        
+        // Sidebar Navigation Drawer //
+        <nav class="sidebar">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="Halisi-events.html" class="active"><i class="fa-solid fa-calendar-days"></i> Browse Events</a>
+            <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i> Scan Pass</a>
+        </nav>
+        
+        // Main Content Area //
+        <main class="content-body">
+            
+            //Hero Banner//
+            <section class="hero-section">
+                <div class="hero-badge"><i class="fa-solid fa-ticket"></i> Live Listings</div>
+                <h1 class="hero-title">All Events</h1>
+                <p class="hero-subtitle">Browse what's happening around you and cop your smart ticket instantly.</p>
+            </section>
 
-      <main class="content body">
-        <section class="hero-section">
-          <div class="hero-badge">
-            <i class="fa-solid fa-ticket"></i>Live Listings
-          </div>
-          <h1 class="hero-title">All Events</h1>
-          <p class="hero-subtitle">
-            Browse whats happening and grab your smart ticket.
-          </p>
-        </section>
+            // Events & Search Section //
+            <section class="events-section">
+                <!-- Search & Filter Controls -->
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="event-search" 
+                        class="search-input" 
+                        placeholder="Search events, venues, or categories..." 
+                    />
+                </div>
 
-        <section class="events-section">
-          <div class="search-container">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input
-              type="text"
-              id="event-search"
-              placeholder="Search events,Venues,or categories..."
-            />
-          </div>
+                //Dynamic Event List Container (Populated by script.js) //
+                <div id="event-list" class="event-grid"></div>
+            </section>
 
-          <div id="event-list" class="event-grid"></div>
-        </section>
-      </main>
+        </main>
     </div>
 
+    //Site Footer//
     <footer class="footer">
-      <div class="footer-socials">
-        <a href="https://www.instagram.com/" target="_blank">
-          <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
-
-        <a href="https://www.tiktok.com/" target="_blank">
-          <i class="fa-brands fa-tiktok"></i> TikTok
-        </a>
-      </div>
-      <p class="footer-brand">T-Smart</p>
-      <p class="">&copy; 2026 T-Smart. All right reserved.</p>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
+        </div>
+        <p class="footer-brand">T-Smart</p>
+        <p>&copy; 2026 T-Smart. All rights reserved.</p>
     </footer>
 
+    //  App Logic //
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
