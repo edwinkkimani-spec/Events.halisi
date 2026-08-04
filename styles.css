@@ -212,35 +212,92 @@
     font-weight: 700;
     color: #f8fafc;
 }
+/* ==========================================================================
+   EVENTS PAGE SPECIFIC STYLES
+   ========================================================================== */
 
-.ticket-card{
-  max-width:320px;
-  margin:2rem auto;
-  padding:1.5rem;
-  border-radius:1px solid #472d30;
-  border-radius:10px;
-  background:#fff;
-}
-.ticket-card p{
-  margin:0.4 rem 0;
-
-
+/* Search Bar Container */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 32px;
 }
 
-#qrcode-box{
-  
-  justify-content:center;
-  margin-top:1.5rem;
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.1rem;
 }
 
-.table{
-  display:flex;
-  gap:300px;
-  text-align: center;
+.search-input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    color: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.25s ease;
 }
 
-.search-bar{
-  max-width:400px;
-  margin:0 auto 1.5rem;
-  padding:0 1.5rem;
+.search-input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.search-input::placeholder {
+    color: #64748b;
+}
+
+/* Event Cards Grid */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Base Card Styling for JS-rendered items */
+.event-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: #475569;
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.event-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.event-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
 }

@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events</title>
-     <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>T-Smart | Browse Events</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="site-header">
@@ -21,42 +26,55 @@
         class="header-img header-img-right"
       />
     </header>
-   <div class="layout">
-    <nav class="sidebar">
-      <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
-      <a href="Halisi-events.html" class="active"><i class="fa-solid fa-calendar-days"></i>Browse Events</a>
-      <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i>Scan pass</a>
-    </nav>
-    <main class="content body">
-        
-      <div class="hero-section">
-        <div class="hero-badge"><i class="fas-solid fa-ticket"></i>Live Listing</div>
-      <h1 class="hero-titl">All Events</h1>
-      <p class="hero-subtitle">Browse whats happening and grab your smart ticket.</p>
-      
-      </div>
-      <section class="events-section">
-        <div class="search-container">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" id="event-search" placeholder="Search events,Venues,or categories..."/>
-        </div>
-        <div id="event-list" class="event-grid"></div>
-      </section>
-    </main>
-   </div>
+    <div class="layout">
+      <nav class="sidebar">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="Halisi-events.html" class="active"
+          ><i class="fa-solid fa-calendar-days"></i>Browse Events</a
+        >
+        <a href="qrcode.html"><i class="fa-solid fa-qrcode"></i>Scan pass</a>
+      </nav>
 
+      <main class="content body">
+        <section class="hero-section">
+          <div class="hero-badge">
+            <i class="fa-solid fa-ticket"></i>Live Listings
+          </div>
+          <h1 class="hero-title">All Events</h1>
+          <p class="hero-subtitle">
+            Browse whats happening and grab your smart ticket.
+          </p>
+        </section>
+
+        <section class="events-section">
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+              type="text"
+              id="event-search"
+              placeholder="Search events,Venues,or categories..."
+            />
+          </div>
+
+          <div id="event-list" class="event-grid"></div>
+        </section>
+      </main>
+    </div>
 
     <footer class="footer">
       <div class="footer-socials">
-        <a href="https://www.instagram.com/..." target="_blank">
-        <i class="fa-brands fa-instagram"></i> Instagram</a>
-      
-        <a href="https://www.tiktok.com/..." target="_blank">
-        <i class="fa-brands fa-tiktok"></i> TikTok</a>
-        </div>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+
+        <a href="https://www.tiktok.com/" target="_blank">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+      </div>
       <p class="footer-brand">T-Smart</p>
-      <p class="">&copy; 2026 T-Smart.</p>
+      <p class="">&copy; 2026 T-Smart. All right reserved.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
