@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Your Ticket By T-Smart</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Smart | Your Ticket Pass</title>
+    
+    <!-- Unified CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- FontAwesome for Modern UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+  
     <header class="site-header">
-    <img
-        src="Images/logo.jpg"
-        alt="logo"
-        class="header-img header-img-left"
-      />
-      <h1 class="site-header h1">T-Smart</h1>
-      <img
-        src="Images/logo.jpg"
-        alt="logo"
-        class="header-img header-img-right"
-      />
+        <img src="Images/logo.jpg" alt="T-Smart Logo Left" class="header-img header-img-left" />
+        <h1 class="header-title">T-Smart</h1>
+        <img src="Images/logo.jpg" alt="T-Smart Logo Right" class="header-img header-img-right" />
     </header>
-    <div class="table">
-    <nav class="sidebar">
-      <a href="index.html">Home</a>
-      <a href="Halisi-events.html" class="cta-button">Browse Events</a>
-      <a href="qrcode.html">Scan</a>
-   </nav>
-    <main>
-    
-        <div class="hero">
-            <h2>Your Ticket</h2>
-            <p>This QR code is your entry pass.Take a screenshoot or leave the page open</p>
-        </div>
+
+  
+    <div class="layout">
         
-        <section class="ticket-card">
-            <p><strong>Event:</strong> <span id="ticket-event"></span></p>
-             <p><strong>Name:</strong> <span id="ticket-name"></span></p>
-             <p><strong>Ticket ID:</strong> <span id="ticket-id">-</span></p>
-             <div id="qrcode-box"></div>
-        </section>
-    </main>
+    
+        <nav class="sidebar">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="Halisi-events.html"><i class="fa-solid fa-calendar-days"></i> Browse Events</a>
+            <a href="qrcode.html" class="active"><i class="fa-solid fa-qrcode"></i> Scan Pass</a>
+        </nav>
+        
+        
+        <main class="content-body">
+            
+      
+            <section class="hero-section">
+                <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Gate Validation</div>
+                <h1 class="hero-title">Your Digital Ticket</h1>
+                <p class="hero-subtitle">This QR code is your official entry pass. Keep this page open or save a screenshot before arriving at the venue.</p>
+            </section>
+
+        
+            <div id="ticketWrapper" class="ticket-wrapper">
+                <section class="ticket-card">
+                    <div class="ticket-header">
+                        <i class="fa-solid fa-ticket ticket-icon"></i>
+                        <h3>Verified Entry Pass</h3>
+                    </div>
+
+                    <div class="ticket-details">
+                        <p><strong>Event:</strong> <span id="ticket-event">Loading...</span></p>
+                        <p><strong>Holder Name:</strong> <span id="ticket-name">Loading...</span></p>
+                        <p><strong>Ticket ID:</strong> <span id="ticket-id" class="ticket-id-badge">-</span></p>
+                    </div>
+
+                    <!-- QR Code Render Container -->
+                    <div id="qrcode-box" class="qrcode-container"></div>
+                </section>
+            </div>
+
+            
+            <section class="gate-scanner-card">
+                <h3><i class="fa-solid fa-door-open"></i> Entrance Gate Simulator</h3>
+                <p>Simulate staff scanning your pass at the venue entry or cancel your pass.</p>
+
+          
+                <button id="scanTicketBtn" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-barcode"></i> Scan Ticket at Gate
+                </button>
+                
+              
+                <button id="deleteTicketBtn" class="btn btn-danger btn-block">
+                    <i class="fa-solid fa-trash"></i> Cancel & Delete Ticket
+                </button>
+
+                <small id="scanMessage" class="scan-message"></small>
+            </section>
+
+        </main>
     </div>
 
+    <!-- Site Footer -->
     <footer class="footer">
-      <div class="footer-socials">
-        <a href="https://www.instagram.com/..." target="_blank">
-        <i class="fa-brands fa-instagram"></i> Instagram</a>
-      
-        <a href="https://www.tiktok.com/..." target="_blank">
-        <i class="fa-brands fa-tiktok"></i> TikTok</a>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
         </div>
-      <p class="footer-brand">T-Smart</p>
-      <p class="">&copy; 2026 T-Smart.</p>
+        <p class="footer-brand">T-Smart</p>
+        <p>&copy; 2026 T-Smart. All rights reserved.</p>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>
