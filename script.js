@@ -14,7 +14,7 @@ const eventsData = [
         date: "Aug 14, 2026 • 8:00 AM",
         venue: "Uhuru Gardens, Nairobi",
         category: "Food",
-        price: "TBD",
+        price: "Ksh2,800",
         image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
         lat: -1.3181,
         lng: 36.8115
@@ -25,7 +25,7 @@ const eventsData = [
         date: "Aug 23, 2026 • 4:00 PM",
         venue: "Kenyatta International Convention Centre (KICC), Nairobi",
         category: "Music",
-        price: "TBD",
+        price: "Ksh1,900",
         image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
         lat: -1.2897,
         lng: 36.8219
@@ -36,7 +36,7 @@ const eventsData = [
         date: "Aug 19-21, 2026",
         venue: "Sarit Expo Centre, Nairobi",
         category: "Expo",
-        price: "TBD",
+        price: "Ksh1,890",
         image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
         lat: -1.2627,
         lng: 36.8047
@@ -47,7 +47,7 @@ const eventsData = [
         date: "Aug 27, 2026 • 4:30 PM",
         venue: "Hyatt Regency Nairobi Westlands",
         category: "Business",
-        price: "TBD",
+        price: "Ksh2,800",
         image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
         lat: -1.2649,
         lng: 36.8039
@@ -58,7 +58,7 @@ const eventsData = [
         date: "Sep 28, 2026 • 6:00 AM",
         venue: "Jamhuri Park, Nairobi",
         category: "Expo",
-        price: "TBD",
+        price: "Ksh1,500",
         image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
         lat: -1.3009,
         lng: 36.7794
@@ -197,24 +197,34 @@ function toRad(degrees) {
 
 // ==========================================================================
 // Registration Modal (same-page form triggered by "Get Pass")
-// ==========================================================================
+
 window.registerTicket = function (eventId) {
     const selectedEvent = eventsData.find(e => e.id === eventId);
     if (!selectedEvent) return;
 
     pendingEventId = eventId;
-    document.getElementById("modalEventTitle").textContent = selectedEvent.title;
-    document.getElementById("registerModal").style.display = "flex";
+
+    const modalTitle = document.getElementById("modalEventTitle");
+    const modal = document.getElementById("registerModal"); // Defined locally here
+
+    if (modalTitle) modalTitle.textContent = selectedEvent.title;
+    
+    if (modal) {
+        modal.classList.add("open");
+        const form = document.getElementById("registerForm");
+        if (form) form.reset();
+    }
 };
 
 function initRegisterModal() {
     const registerForm = document.getElementById("registerForm");
     const closeModalBtn = document.getElementById("closeModalBtn");
-    const modal = document.getElementById("registerModal");
+    const modal = document.getElementById("registerModal"); // Defined locally here
 
+    // Form submit handler
     if (registerForm) {
         registerForm.addEventListener("submit", (e) => {
-            e.preventDefault(); // stop the page from reloading
+            e.preventDefault();
 
             const selectedEvent = eventsData.find(ev => ev.id === pendingEventId);
             if (!selectedEvent) return;
@@ -238,12 +248,23 @@ function initRegisterModal() {
         });
     }
 
+    // Close on 'X' button click
     if (closeModalBtn && modal) {
         closeModalBtn.addEventListener("click", () => {
-            modal.style.display = "none";
+            modal.classList.remove("open");
+        });
+    }
+
+    // Close when clicking outside the modal box
+    if (modal) {
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("open");
+            }
         });
     }
 }
+
 
 // ==========================================================================
 // 2. TICKET & GATE SCANNER LOGIC (qrcode.html)
