@@ -413,12 +413,21 @@
 }
 
 .btn-primary {
-    background: #38bdf8;
+    background:#fdf0d5;
     color: #0f172a;
 }
 
+.btn-secondary{
+    color:green;
+    
+}
+.btn-secondary:hover{
+    background-color: gainsboro;
+    
+}
+
 .btn-primary:hover {
-    background: #7dd3fc;
+    background:#333d29;
 }
 
 .btn-danger {

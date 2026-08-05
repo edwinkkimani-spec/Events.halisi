@@ -1,12 +1,10 @@
 // ==========================================================================
 // Events Database
-// Each event now includes latitude/longitude so we can calculate
+// Each event  includes latitude/longitude so we can calculate
 // how far it is from the user's current location.
 // ==========================================================================
 // NOTE: lat/lng values below are approximate landmark coordinates.
-// Verify each one precisely in Google Maps (right-click the exact
-// venue location -> click the coordinates to copy) before relying
-// on them for accurate distance calculations.
+
 const eventsData = [
     {
         id: "evt-101",
@@ -71,9 +69,8 @@ let userLocation = null;
 // Remembers which event is being registered for while the modal is open
 let pendingEventId = null;
 
-// ==========================================================================
+
 // Initialize on DOM Ready
-// ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
     initEventsPage();
     initTicketPage();
