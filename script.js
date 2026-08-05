@@ -1,4 +1,3 @@
-// ==========================================================================
 // Events Database
 // Each event  includes latitude/longitude so we can calculate
 // how far it is from the user's current location.
@@ -77,9 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initRegisterModal();
 });
 
-// ==========================================================================
 // 1. BROWSE EVENTS PAGE LOGIC (Halisi-events.html)
-// ==========================================================================
+
 function initEventsPage() {
     const eventListContainer = document.getElementById("event-list");
     const searchInput = document.getElementById("event-search");
