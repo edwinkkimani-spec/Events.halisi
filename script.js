@@ -58,8 +58,21 @@ const eventsData = [
         price: "Ksh1,500",
         image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
         lat: -1.3009,
-        lng: 36.7794
-    }
+        lng: 36.77
+    },
+
+    {
+      
+        id: "evt-106",
+        title: "Solfest",
+        date: "Feb 15, 2026 • 6:00 PM till late",
+        venue: "Uhuru Gardens, Nairobi",
+        category: "Music",
+        price: "Ksh 3,000 (Regular) / 5,000 (VIP) / 8,000 (VVIP)",
+        image: "https://th.bing.com/th/id/OIP.CBwUkMllxRGqAlE6BKqlLwHaEK?w=273&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
+        lat: -1.3181,
+        lng: 36.8115
+    }  
 ];
 
 // Holds the user's coordinates once geolocation succeeds
@@ -147,7 +160,7 @@ function initEventsPage() {
     // Initial render (before we know location, or if location is denied)
     updateView();
 
-    // Ask the browser for the user's location. If granted, recompute
+    // Ask the browser for the user's location. If granted, recomputes
     // distances and re-render sorted nearest-first.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
