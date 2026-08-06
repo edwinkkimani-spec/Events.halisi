@@ -1,44 +1,49 @@
- T-Smart | Smart Digital Ticketing Web Application
+# Halisi Events — Event Discovery & Ticketing
 
-T-Smart is an end-to-end digital ticketing and entry verification platform designed for event organizers and attendees. It eliminates physical ticket counterfeiting by producing dynamically rendered, single-use QR pass entries linked directly to attendee registrations.
+A browser-based event listing and ticket registration site. Users can browse events happening in Nairobi, search/filter them, see how far each one is from their current location, register for a pass via M-Pesa, and view/scan their ticket as a QR code.
 
----
+## Features
 
-##  Key Features
+- **Event browsing** — events are rendered dynamically from a JavaScript data array (`eventsData`), each with a title, date, venue, category, price, and image.
+- **Search** — a live search bar filters events by title, venue, or category as the user types.
+- **Location-based sorting ("near you")** — using the browser's Geolocation API, events are sorted nearest-first once the user grants location access, with the distance (in km) shown on each card. If location access is denied or unavailable, the app falls back gracefully to showing events unsorted.
+- **Registration popup** — clicking "Get Pass" opens an in-page modal collecting the user's name, email, and M-Pesa phone number, without navigating away from the events page.
+- **Ticket generation** — on submission, a unique ticket ID is generated and saved to the browser's `localStorage`, then the user is redirected to a QR code ticket page.
+- **QR code ticket page** — displays the registered event, holder name, ticket ID, and a scannable QR code generated from the ticket data.
+- **Gate scanning simulation** — a "Scan" button marks the ticket as used and blocks re-entry on a second scan; a "Delete" button clears the active ticket.
+- **Data persistence** — ticket data persists across page loads/navigation using `localStorage`, so the ticket remains available if the browser is closed and reopened.
 
-1. **Semantic & Responsive Layout**: Clean, accessible markup (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) with sidebar drawer navigation.
-2. **Event Browsing & Dynamic Search**: Instant client-side search filtering across upcoming Halisi events by title, venue, or category.
-3. **Registration Form Validation**: Complete user details validation (Name, Email, Phone, Pass Type) before ticket generation.
-4. **Data Persistence via `localStorage`**: Registration data persists across web pages without requiring a backend server.
-5. **Smart Ticket & QR Code Generation**: Instant QR code generation encoding attendee registration metadata.
-6. **Single-Use Entry Verification Simulator**: Entrance gate simulation that marks tickets as **USED/SCANNED** to block reuse and duplication.
+## Tech Used
 
----
+- HTML5 (semantic structure: header, nav, main, section, footer)
+- CSS3 (custom properties, responsive design with mobile/tablet/desktop breakpoints, hover/transition animations)
+- Vanilla JavaScript (DOM manipulation, event handling, Geolocation API, localStorage)
+- [QRCode.js](https://github.com/davidshimjs/qrcodejs) for QR code generation
+- Font Awesome for icons
+
+## How to Run
+
+Geolocation requires a secure context (`https://` or `localhost`) — opening the HTML file directly (`file://`) will silently block the location prompt. To run locally:
+
+1. Open this project folder in VS Code.
+2. Install the **Live Server** extension.
+3. Right-click `Halisi-events.html` → **Open with Live Server**.
+4. Allow location access when prompted, to see events sorted by distance.
 
 ## Project Structure
 
-* `index.html`: Landing homepage featuring platform introduction, key stats, and an about section.
-* `Halisi-events.html`: Directory listing for Halisi events, live search bar, and interactive registration modal.
-* `qrcode.html`: Smart Digital Pass rendering page displaying QR codes and entrance gate validation scanner.
-* `styles.css`: Centralized stylesheet featuring modern glassmorphic accents, CSS grid/flexbox layouts, dark mode theme, and mobile responsiveness.
-* `script.js`: Core application logic covering UI events, DOM updates, form validation, localStorage persistence, and QR rendering.
+```
+├── Halisi-events.html   # Browse/search events, registration popup
+├── qrcode.html           # Ticket display + QR code + gate scanner
+├── script.js              # All application logic
+├── styles.css             # Base styles
+├── skiddle-theme.css      # Visual theme layer (loaded after styles.css)
+└── README.md
+```
 
----
+## Known Issues / Limitations
 
-##  Technology Stack
-
-* **HTML5**: Semantic elements and structured document architecture.
-* **CSS3**: CSS Variables, Flexbox, CSS Grid, media queries, CSS transitions.
-* **JavaScript (ES6+)**: DOM manipulation, event listeners, form validation, state management via Web Storage API.
-* **Libraries**: 
-  * [FontAwesome v6.4.0](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css) (Icons)
-  * [QRCode.js v1.0.0](https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js) (QR Code rendering)
-
----
-
-##  How to Run the Project Locally
-
-1. Clone or download the repository files into a single directory:
-   ```bash
-   git clone [https://github.com/your-username/t-smart-ticketing.git](https://github.com/your-username/t-smart-ticketing.git)
-   cd t-smart-ticketing
+- Venue coordinates in `eventsData` are approximate landmark estimates and should be verified precisely (e.g. via Google Maps) for fully accurate distance calculations.
+- Ticket prices for some events are marked `"TBD"` pending confirmation from event organizers.
+- M-Pesa payment is captured as a phone number field only — no live payment/STK push integration is connected; this is a front-end simulation of the registration flow.
+- One event's image is sourced from a Facebook CDN link, which may expire or be blocked by hotlink protection; recommend self-hosting the image if it fails to load.
