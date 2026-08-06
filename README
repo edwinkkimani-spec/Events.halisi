@@ -44,6 +44,4 @@ Geolocation requires a secure context (`https://` or `localhost`) — opening th
 ## Known Issues / Limitations
 
 - Venue coordinates in `eventsData` are approximate landmark estimates and should be verified precisely (e.g. via Google Maps) for fully accurate distance calculations.
-- Ticket prices for some events are marked `"TBD"` pending confirmation from event organizers.
 - M-Pesa payment is captured as a phone number field only — no live payment/STK push integration is connected; this is a front-end simulation of the registration flow.
-- One event's image is sourced from a Facebook CDN link, which may expire or be blocked by hotlink protection; recommend self-hosting the image if it fails to load.
