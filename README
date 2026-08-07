@@ -3,7 +3,7 @@
 A browser-based event listing and ticket registration site. Users can browse events happening in Nairobi, search/filter them, see how far each one is from their current location, register for a pass via M-Pesa, and view/scan their ticket as a QR code.
 
 ## Features
-
+<===========>
 - **Event browsing** — events are rendered dynamically from a JavaScript data array (`eventsData`), each with a title, date, venue, category, price, and image.
 - **Search** — a live search bar filters events by title, venue, or category as the user types.
 - **Location-based sorting ("near you")** — using the browser's Geolocation API, events are sorted nearest-first once the user grants location access, with the distance (in km) shown on each card. If location access is denied or unavailable, the app falls back gracefully to showing events unsorted.
