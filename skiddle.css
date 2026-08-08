@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Skiddle-Inspired Theme
-   Built on your existing dark palette + class names — drop this in
-   AFTER your current stylesheet so it overrides where needed.
-   ========================================================================== */
-
 :root {
     --bg: #0b1220;
     --surface: #141b2d;
