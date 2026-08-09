@@ -26,9 +26,7 @@ h1, h2, h3, .hero-title {
     letter-spacing: -0.02em;
 }
 
-/* ==========================================================================
-   Navbar
-   ========================================================================== */
+/* Navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -53,9 +51,7 @@ h1, h2, h3, .hero-title {
     color: var(--accent);
 }
 
-/* ==========================================================================
-   Hero / Search
-   ========================================================================== */
+/* Hero / Search */
 .hero {
     padding: 64px 32px 48px;
     text-align: center;
@@ -99,9 +95,7 @@ h1, h2, h3, .hero-title {
     box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-/* ==========================================================================
-   Event Grid & Cards
-   ========================================================================== */
+/* Event Grid & Cards */
 #event-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -169,9 +163,7 @@ h1, h2, h3, .hero-title {
     border-radius: 999px;
 }
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -198,9 +190,7 @@ h1, h2, h3, .hero-title {
     background: var(--accent-hover);
 }
 
-/* ==========================================================================
-   Registration Modal — aligned to the same accent color
-   ========================================================================== */
+/* Registration Modal — aligned to the same accent color*/
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -281,16 +271,12 @@ h1, h2, h3, .hero-title {
     border-color: var(--accent);
 }
 
-/* ==========================================================================
-   Empty state (no search results)
-   ========================================================================== */
-#event-list p {
+/*   Empty state (no search results) */
+   #event-list p {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   Responsive
-   ========================================================================== */
+/* Responsive */
 
 /* Tablet */
 @media (max-width: 1024px) {
