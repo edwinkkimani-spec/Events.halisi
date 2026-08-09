@@ -4,8 +4,8 @@
     --surface-hover: #1b2438;
     --border: #263049;
     --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --accent: #ff5a36;        /* bold coral-orange — the one accent to spend boldness on */
+    --text-muted: #718aac;
+    --accent:blue;        /* bold coral-orange — the one accent to spend boldness on */
     --accent-hover: #ff7452;
     --accent-soft: rgba(255, 90, 54, 0.12);
 }
